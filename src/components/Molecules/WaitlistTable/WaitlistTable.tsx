@@ -1,4 +1,3 @@
-// TableComponent.js
 import {
     WaitlistTableData,
     WaitlistTableHeader,

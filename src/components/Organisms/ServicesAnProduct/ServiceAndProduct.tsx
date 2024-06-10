@@ -1,6 +1,12 @@
+"use client";
+
 import SearchBar from "@/components/Atoms/SearchBar/SearchBar";
+import TagSearch from "@/components/Molecules/TagSearch/TagSearch";
+import { useState } from "react";
 
 const ServiceAndProduct = () => {
+  const [searchType, setSearchType] = useState("name");
+
   return (
     <div>
       <div className="flex justify-between p-2">
@@ -10,6 +16,8 @@ const ServiceAndProduct = () => {
             type="radio"
             name="searchtype"
             className="accent-black cursor-pointer"
+            checked={searchType === "name"}
+            onChange={() => setSearchType("name")}
           />
           <label htmlFor="searchByName" className="cursor-pointer">
             Search by name
@@ -21,6 +29,8 @@ const ServiceAndProduct = () => {
             type="radio"
             name="searchtype"
             className="accent-black cursor-pointer"
+            checked={searchType === "tag"}
+            onChange={() => setSearchType("tag")}
           />
           <label htmlFor="searchByTag" className="cursor-pointer">
             Search by tags
@@ -29,7 +39,11 @@ const ServiceAndProduct = () => {
         <div></div>
       </div>
 
-      <SearchBar placeholder="Search service name" />
+      {searchType === "name" ? (
+        <SearchBar placeholder={"Search service name"} />
+      ) : (
+        <TagSearch />
+      )}
     </div>
   );
 };

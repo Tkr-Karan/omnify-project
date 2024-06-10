@@ -11,7 +11,7 @@ const FilterPopup = () => {
     setActiveTab(index);
   };
   return (
-    <div className="w-[600px] h-[400px] bg-slate-200 absolute z-[99] mt-2 rounded-md flex flex-col shadow-2xl overflow-hidden">
+    <div className="w-[600px] h-[400px] bg-slate-200 absolute z-[99] mt-2 rounded-md flex flex-col shadow-2xl">
       <div className="flex">
         {/* left drawer container */}
         <div className="w-[50%] h-[350px] border-r-slate-300 border-r-2 border-solid">
