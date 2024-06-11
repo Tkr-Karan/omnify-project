@@ -22,6 +22,8 @@ export default function LeftDrawer() {
     setIsCollapsed(!isCollapsed);
   };
 
+  const [selectedItem, setSelectedItem] = useState("Waitlist");
+
   return (
     <div
       className={`p-2 flex flex-col justify-between transition-all duration-300 ${
@@ -128,9 +130,12 @@ export default function LeftDrawer() {
           {LeftDrawerItem.map((item, idx) => (
             <div
               key={idx}
-              className={`flex items-center m-2 p-1 cursor-pointer hover:bg-white rounded-md hover:font-bold ${
-                isCollapsed ? "justify-center" : "gap-4"
-              }`}
+              onClick={() => setSelectedItem(item.itemName)}
+              className={`flex items-center m-2 p-1 cursor-pointer rounded-md ${
+                selectedItem === item.itemName
+                  ? "bg-white font-bold"
+                  : "hover:bg-white hover:font-bold"
+              } ${isCollapsed ? "justify-center" : "gap-4"}`}
             >
               <div>
                 <Image
@@ -147,7 +152,10 @@ export default function LeftDrawer() {
         </div>
 
         {isCollapsed && (
-          <div className="cursor-pointer pl-4 pt-2 rotate-180" onClick={toggleCollapse}>
+          <div
+            className="cursor-pointer pl-4 pt-2 rotate-180"
+            onClick={toggleCollapse}
+          >
             <Image
               className="w-[22px]"
               src={CollapseIcon}
