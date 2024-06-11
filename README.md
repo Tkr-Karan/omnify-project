@@ -1,3 +1,4 @@
+![Performance report Omnify](https://github.com/Tkr-Karan/omnify-project/assets/72157767/67230bc4-21e2-40d0-adea-1e45e38e3cb9)
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
