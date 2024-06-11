@@ -37,3 +37,27 @@ export const DropDownOptionList = [
   "This Year",
   "Last Year",
 ];
+
+export const statusDropDownOptionList = [
+  "Show All",
+  "Public",
+  "Private",
+  "Disable",
+  "Draft",
+  "Active",
+  "In-active",
+  "Pending",
+];
+
+export const serviceDropDownOptionList = [
+  "Show all servie type",
+  "Class",
+  "Appointment",
+  "Facility",
+  "Class pack",
+  "Membership",
+  "General items",
+  "Online",
+  "Offline",
+  "Both",
+];

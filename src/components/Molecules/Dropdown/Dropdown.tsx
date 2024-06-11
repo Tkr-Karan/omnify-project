@@ -1,8 +1,7 @@
-import { DropDownOptionList } from "@/constants/filterPopupData";
 import { SetStateAction, useState } from "react";
 
-const Dropdown = () => {
-  const [selectedOption, setSelectedOption] = useState("All time");
+const Dropdown = ({ dropDownData }: any) => {
+  const [selectedOption, setSelectedOption] = useState("Select One");
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSelect = (option: SetStateAction<string>) => {
@@ -43,7 +42,7 @@ const Dropdown = () => {
             aria-orientation="vertical"
             aria-labelledby="options-menu"
           >
-            {DropDownOptionList.map((option, index) => (
+            {dropDownData.map((option, index) => (
               <a
                 key={index}
                 onClick={() => handleSelect(option)}
