@@ -36,7 +36,7 @@ import {
                       type="checkbox"
                       onChange={handleSelectAll}
                       checked={selectedRows.length === WaitlistTableData.length}
-                      className="accent-black"
+                      className="accent-black cursor-pointer"
                     />
                   </th>
                   {WaitlistTableHeader.map((header, indx) => (
@@ -68,7 +68,7 @@ import {
                         type="checkbox"
                         onChange={() => handleSelectRow(index)}
                         checked={selectedRows.includes(index)}
-                        className="accent-black"
+                        className="accent-black cursor-pointer"
                       />
                     </td>
                     <td className="py-2 px-4 border-b">{row.createdOn}</td>
